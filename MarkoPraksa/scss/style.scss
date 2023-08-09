@@ -49,9 +49,11 @@ body body img {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
+
+
 .header .navbar {
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
   height: 64px;
   margin: 0 5rem;
 }
@@ -63,6 +65,8 @@ body body img {
 .header .navbar ul {
   display: flex;
   flex: 1;
+  /*flex-direction: column;*/
+  /*background-color: white;*/
 }
 
 .header .navbar ul li {
@@ -185,9 +189,28 @@ main .firstPar .rightPar .rightMain .aboutUs {
   font-size: 16px;
 }
 
-main .firstPar .rightPar .rightMain .aboutUs:hover {
+main .firstPar .rightPar .rightMain .aboutUs:hover { 
   cursor: pointer;
 }
+
+/**/
+
+.parallax-container {
+  position: relative;
+  width: 100%;
+  height: 500px; 
+  background-image: url(/truck.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+
 
 main .thirdPar {
   margin-top: 3rem;
@@ -255,6 +278,9 @@ main .fourthPar .fourthTitle h3 {
   color: #fff;
   font-family: "Inter", sans-serif;
 }
+/**/
+
+.fifthPar 
 
 .fifthPar {
   background-color: #F4F4F4;
@@ -300,6 +326,7 @@ main .fourthPar .fourthTitle h3 {
 .sixBrands .brand .brandImage {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 .sixBrands .brand .brandTitle {
   display: flex;
@@ -330,6 +357,8 @@ main .fourthPar .fourthTitle h3 {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   padding: 14px 16px;
+  cursor: pointer;
+  margin: 10px 0 10px 0;
 }
 
 footer {
@@ -352,7 +381,7 @@ footer .footer .footerLogo {
 }
 footer .footer .contact, footer .footer .title {
   margin-bottom: 15px;
-  display: flex;
+  /*display: flex;*/
   font-family: "Inter", sans-serif;
 }
 footer .footer .footerList ul {
@@ -417,6 +446,8 @@ footer .footerDown .layout {
   height: 72%;
 }
 
+
+
 .popup-container {
   position: fixed;
   bottom: 10px;
@@ -446,9 +477,159 @@ footer .footerDown .layout {
   width: 30px;
 }
 
-
+.burger-menu{
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  color: #000
+}
 
 @media (max-width: 768px) {
+  
+.footer{
+  flex-direction: column;
+ 
+}
+
+.mainFuter{
+  text-align: center;
+  
+}
+
+.footerDown{
+  flex-direction: column;
+  text-align: center;
+}
+
+.header .navbar ul {
+ 
+  flex-direction: column;
+  background-color: white;
+}
+
+.header .navbar {
+  
+  flex-direction: column;
+  
+}
+
+  .header .h2 {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar {
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+  }
+
+  .burger-menu {
+   display: block; 
+   flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    color: #000; 
+  }
+
+  .navbar {
+display: block;
+text-align: center;
+padding-top: 15px;
+  }
+
+  .navbar li{
+    margin-bottom: 10px ;
+  }
+
+  .header .h2 .language {
+    display: none;
+  }
+
+ .numbers{
+  display: block;
+}
+
+.numbers .prvi{
+  margin-top: 50px;
+}
+.numbers .prvi2{
+  margin-bottom: 15px;
+}
+
+
+.numbers .treci{
+  margin-top: 15px;
+}
+.numbers .cetvrti{
+  margin-top: 15px;
+}
+
+
+
+  .header .navbar {
+    display: none;
+    flex-direction: column;
+    background-color: #d9d9d9;
+    z-index: 10;
+  }
+
+  
+
+  .header .navbar ul li {
+    padding: 1rem;
+    border: none;
+  }
+
+  .header .navbar.active {
+    display: flex ;
+  }
+
+  
+ 
+  main .firstPar {
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+
+  main .firstPar .rightPar {
+    margin-right: 0;
+  }
+
+  .thirdPar{
+    flex-wrap: wrap;
+  }
+  .thirdPar .img1{
+    padding: 0 0 10px 0;
+  }
+  
+  .thirdPar .img3{
+    padding: 10px 0 0 0;
+  }
+
+  .sixthBrands .brand{
+    flex-wrap: wrap;
+  }
+
+  .sixBrands {
+    flex-direction: column;
+    padding: 0;
+    height: auto;
+  }
+  .sixBrands .brand{
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .header{
+    width: 100%;
+  }
   
   .header .h2 {
     flex-direction: column;
@@ -460,10 +641,7 @@ footer .footerDown .layout {
     display: none;
   }
 
-  .header .hamburger-menu {
-    display: block;
-    cursor: pointer;
-  }
+ 
 
   .header .navbar {
     display: none;
@@ -480,7 +658,7 @@ footer .footerDown .layout {
     display: flex;
   }
 
-  /* Adjust styles for other elements that change at the same screen size */
+ 
   main .firstPar {
     flex-direction: column;
     margin: 1rem 0;
@@ -489,19 +667,203 @@ footer .footerDown .layout {
   main .firstPar .rightPar {
     margin-right: 0;
   }
+
+  .thirdPar{
+    flex-wrap: wrap;
+  }
+  .thirdPar .img1{
+    padding: 0 0 10px 0;
+  }
+  
+  .thirdPar .img3{
+    padding: 10px 0 0 0;
+  }
+
+  .sixthBrands .brand{
+    flex-wrap: wrap;
+  }
+
+  .sixBrands {
+    flex-direction: column;
+    padding: 0;
+    height: auto;
+  }
+  .sixBrands .brand{
+    margin: 10px 0;
+  }
+}
+
+    
+
+    @media (max-width: 600px){
+        .header {
+          max-width: 100%;
+    }
+    .sixBrands {
+      flex-direction: column;
+      padding: 0;
+      height: auto;
+    }
+    .sixBrands .brand{
+      margin: 10px 0;
+    }
+
+    main .fourthPar {
+      margin-top: 5rem;
+      text-align: center; 
+    }
+  
+    main .fourthPar .fourthTitle {
+      margin: 1rem 0;
+    }
+  
+    main .fourthPar .fourthTitle h2 {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 1.2; 
+      text-align: center;
+    }
+  
+    main .fourthPar .fourthTitle h3 {
+      color: #474747;
+    }
+  }
+  
+
+
+  @media (max-width: 320px){
+    .header {
+      max-width: 100%;
+}
 }
 
 .dark-mode-toggle {
-  position: fixed;
+  
   bottom: 20px;
   right: 20px;
   font-size: 24px;
-  cursor: pointer;
-  
+  cursor: pointer;  
 }
 
-body.dark-mode {
-  color: #ffffff; 
+body.dark-mode {  
+  color: white; 
   background-color: #121212; 
 }
-/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=stil.css.map */
+
+
+
+
+
+
+.fifthPar.dark-mode{
+  background-color: #121212;
+  color: white;
+}
+
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  width: 500px;
+  height: 500px;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  height: 100%;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}

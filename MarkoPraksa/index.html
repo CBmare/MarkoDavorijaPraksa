@@ -13,8 +13,17 @@
 
 <body>
 
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <p>Welcome to Our Website!</p>
+      <button2 id="closePopup">Close</button2>
+    </div>
+  </div>
+
+
+
   <div class="popup-container">
-    <img src="img/coupon.png" alt="Popup Picture" class="popup-image">
+    <img src="img/kupon2.png" alt="Popup Picture" class="popup-image">
     <div class="close-button" onclick="closePopup()">&times;</div>
   </div>
 
@@ -26,7 +35,7 @@
       <div class="language">
         <ul>
           <li>
-            <a href="#" class="active"> Srpski</a>
+            <a href="#" > Srpski</a>
           </li>
           <li>
             <a href="#"> English</a>
@@ -41,7 +50,7 @@
       </div>
     </div>
     <nav class="navbar">
-      <div class="burger-bar" onclick="toggleNavbar()">&#9776;</div>
+      
       <ul>
         <li>
           <h3>O NAMA</h3>
@@ -68,12 +77,46 @@
           <p>aktuelnosti</p>
         </li>
       </ul>
+  
     </nav>
+
+    <div class="burger-menu" onclick="toggleMenu()">&#9776;</div>
+
   </header>
   <main>
-    <div class="image">
-      <img src="img/zgrada.png" alt="DVG zgrada" class="zgradaImg"  style="width: 100%;"/>
-      <img src="img/strelica1.png" alt="Strelica za dole" class="strelicaImg">
+    
+    <div class="slideshow-container">
+
+      
+      <div class="mySlides fade">
+        
+        <img src="/img/zgrada.png" style="width:100%" alt="prvaS">
+        
+      </div>
+    
+      <div class="mySlides fade">
+       
+        <img src="/img/zgrada2.png" style="width:100%" alt="drugaS">
+     
+      </div>
+    
+      <div class="mySlides fade">
+        
+        <img src="/img/zgrada3.png" style="width:100%" alt="trecaS">
+      
+      </div>
+    
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
     </div>
     <div class="firstPar">
       <div class="image1">
@@ -103,24 +146,32 @@
         </div>
       </div>
     </div>
-    <div class="secondPar">
-      <img src="img/putevi.png" alt="Pouzdana distribucija" style="width: 100%;"/>
+    <div class="parallax-container">
+      <div class="parallax-image">
+     
+    </div>
     </div>
     <div class="thirdPar">
       <div class="img1">
         <img src="img/sastanak.png" alt="Nas partner" />
         <h4>Postanite naš partner</h4>
-        <div class="line"></div>
+        <div class="line">
+          <img src="/img/linija.png" alt="">
+        </div>
       </div>
       <div class="img2">
         <img src="img/flasice.png" alt="Nasi proizvodi" />
         <h4>Naši proizvodi</h4>
-        <div class="line"></div>
+        <div class="line">
+          <img src="/img/linija.png" alt="">
+        </div>
       </div>
       <div class="img3">
         <img src="img/uvoz.png" alt="Uvoz iz madjarske" />
         <h4>Uvoz iz mađarske</h4>
-        <div class="line"></div>
+        <div class="line">
+          <img src="/img/linija.png" alt="">
+        </div>
       </div>
     </div>
 
@@ -134,19 +185,19 @@
 
       <div class="numbers" style="background-image: url(./img/crveno.png);">
         <div class="number">
-          <h3>3.000 m<sup>2</sup></h3>
-          <p>Magacinskog prostora</p>
+          <h3 class="prvi">3.000 m<sup>2</sup></h3>
+          <p class="prvi2">Magacinskog prostora</p>
         </div>
         <div class="number">
-          <h3>20</h3>
+          <h3 drugi>20</h3>
           <p>Vozila</p>
         </div>
         <div class="number">
-          <h3>8</h3>
+          <h3 class="treci">8</h3>
           <p>Komercijalista</p>
         </div>
         <div class="number">
-          <h3>170</h3>
+          <h3 class="cetvrti">170</h3>
           <p>Brendova</p>
         </div>
       </div>
@@ -165,9 +216,9 @@
       </div>
       <div class="fiveProducts">
         <div class="swiper">
-          <!-- Additional required wrapper -->
+         
           <div class="swiper-wrapper">
-            <!-- Slides -->
+            
             <div class="swiper-slide">
               <img src="img/kesefolije.png" alt="Kesa za smece" />
               <p>KESE I FOLIJE</p>
@@ -264,7 +315,7 @@
   </main>
 
 
-  <footer>
+  <footer class="mainFuter">
     <div class="footer" style="background-image:url(./img/pozadina.png)">
       <img src="img/fullogo.png" alt="DVG Logo" class="footerLogo" />
       <div class="border">
@@ -322,7 +373,7 @@
             Pratite nas:
           </div>
           <div class="icons">
-            <img src="img/facebook.png" alt=" Facebook">
+            <a href="https://www.facebook.com/"><img src="img/facebook.png" alt=" Facebook" ></a>
             <img src="img/twitter.png" alt=" Twitter">
             <img src="img/yt.png" alt="Youtube">
             <img src="img/mess.png" alt="Messenger">
@@ -342,15 +393,16 @@
           Uslovi korišćenja
         </p>
       </div>
-
-
-      <p>Powered by:StudioPresent</p>
+        <p>Powered by:StudioPresent</p>
     </div>
   </footer>
+  
+  <script src="burgerbar.js"></script>
+  <script src="/scss/sl.js"></script>
   <script src="script.js"></script>
   <script src="dark.js"></script>
   <script src="prodslider.js"></script>
-  <script src="script2.js"></script>
+  <script src="popup2.js"></script>
 </body>
 
 </html>

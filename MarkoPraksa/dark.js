@@ -2,6 +2,7 @@
 function toggleDarkMode() {
     const body = document.body;
     body.classList.toggle('dark-mode');
+    fiveProd.classList.toggle('dark-mode');
   
     // Save the user's preference in local storage
     const isDarkMode = body.classList.contains('dark-mode');
