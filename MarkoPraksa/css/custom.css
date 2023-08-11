@@ -6,6 +6,15 @@
   padding: 0;
   box-sizing: border-box; }
 
+.tri-slike {
+  max-width: 100%; }
+
+.prob {
+  max-width: 100%; }
+
+.gray {
+  max-width: 100%; }
+
 body {
   color: #000;
   background-color: #F4F4F4; }
@@ -101,7 +110,7 @@ main .firstPar .image1 {
   flex: 1; }
 
 main .firstPar .image1 .firstParImg {
-  max-width: none; }
+  max-width: 100%; }
 
 main .firstPar .rightPar {
   flex: 1;
@@ -427,6 +436,28 @@ footer .footerDown .layout {
   font-size: 20px;
   color: #000; }
 
+.dark-mode-toggle {
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer; }
+
+body.dark-mode {
+  color: white;
+  background-color: #121212; }
+
+.fifthPar.dark-mode {
+  background-color: #121212;
+  color: white; }
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto; }
+
+.skriveno {
+  display: none; }
+
 @media (max-width: 768px) {
   .footer {
     flex-direction: column; }
@@ -570,25 +601,7 @@ footer .footerDown .layout {
   .header {
     max-width: 100%; } }
 
-.dark-mode-toggle {
-  bottom: 20px;
-  right: 20px;
-  font-size: 24px;
-  cursor: pointer; }
-
-body.dark-mode {
-  color: white;
-  background-color: #121212; }
-
-.fifthPar.dark-mode {
-  background-color: #121212;
-  color: white; }
-
-.slideshow-container {
-  max-width: 100%;
-  position: relative;
-  margin: auto; }
-
+/**/
 /* Hide the images by default */
 .mySlides {
   display: none; }
